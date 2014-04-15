@@ -1,0 +1,11 @@
+{
+    "name": "watson-photography-hybrid",
+    "version": "0.0.1",
+    "dependencies": {
+        "jquery": "~1.9.1",
+        "backbone": "~1.1.2",
+        "underscore": "~1.6.0",
+        "requirejs": "~2.1.11"
+
+    }
+}
