@@ -19,7 +19,14 @@
 /Users/capaez/gitRepos/WatsonPhotography/watson-photography-hybrid/platforms/android/assets/www/img \
 /Users/capaez/gitRepos/WatsonPhotography/watson-photography-hybrid/platforms/android/assets/www/index.html \
 /Users/capaez/gitRepos/WatsonPhotography/watson-photography-hybrid/platforms/android/assets/www/js \
+/Users/capaez/gitRepos/WatsonPhotography/watson-photography-hybrid/platforms/android/assets/www/plugins \
 /Users/capaez/gitRepos/WatsonPhotography/watson-photography-hybrid/platforms/android/assets/www/css/index.css \
 /Users/capaez/gitRepos/WatsonPhotography/watson-photography-hybrid/platforms/android/assets/www/img/logo.png \
 /Users/capaez/gitRepos/WatsonPhotography/watson-photography-hybrid/platforms/android/assets/www/js/index.js \
+/Users/capaez/gitRepos/WatsonPhotography/watson-photography-hybrid/platforms/android/assets/www/plugins/org.apache.cordova.device \
+/Users/capaez/gitRepos/WatsonPhotography/watson-photography-hybrid/platforms/android/assets/www/plugins/org.apache.cordova.splashscreen \
+/Users/capaez/gitRepos/WatsonPhotography/watson-photography-hybrid/platforms/android/assets/www/plugins/org.apache.cordova.device/www \
+/Users/capaez/gitRepos/WatsonPhotography/watson-photography-hybrid/platforms/android/assets/www/plugins/org.apache.cordova.device/www/device.js \
+/Users/capaez/gitRepos/WatsonPhotography/watson-photography-hybrid/platforms/android/assets/www/plugins/org.apache.cordova.splashscreen/www \
+/Users/capaez/gitRepos/WatsonPhotography/watson-photography-hybrid/platforms/android/assets/www/plugins/org.apache.cordova.splashscreen/www/splashscreen.js \
 /Users/capaez/gitRepos/WatsonPhotography/watson-photography-hybrid/platforms/android/ant-build/AndroidManifest.xml \
