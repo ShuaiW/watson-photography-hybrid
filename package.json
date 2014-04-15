@@ -1,0 +1,20 @@
+{
+  "name": "watson-photography-hybrid",
+  "version": "0.0.1",
+  "description": "A sample hybrid application for the IBM Watson Mobile Developer Challenge",
+  "license": "MIT",
+  "main": "www/js/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/capaez/...."
+  },
+  "author": {
+    "name": "Carlos Paez",
+    "email": "capaez@us.ibm.com",
+    "url": "https://w3-connections.ibm.com/profiles/html/profileView.do?email=capaez@us.ibm.com"
+  },
+  "keywords": [
+    "Watson"
+  ]
+
+}
