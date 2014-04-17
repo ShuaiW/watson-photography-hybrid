@@ -13,12 +13,13 @@ define([
 			EXTENSION_TEMPLATES : ".handlebars",
 			DEFAULT_PAGE_TRANSITION : "slide",
 			DEFAULT_WINDOW_RESIZE_DELAY : 250, //default time to wait until handling the window resize event
+			DEFAULT_SPLASH_TIME : 500, //in ms
 
 			/**** page view classes need to be added here so they can be loaded before being initialized ****/
 			VIEW_CLASSES : [
 				"com/views/SplashPageView",
-				//"com/views/IndexPageView",
 				//"com/views/LoginPageView",
+				"com/views/SearchScreenPageView",
 			],
 
 			/**** default user settings ****/

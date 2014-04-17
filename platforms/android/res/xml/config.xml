@@ -17,6 +17,8 @@
     <author email="capaez@us.ibm.com" href="">
         IBM
     </author>
+    <preference name="HideKeyboardFormAccessoryBar" value="true" />
+    <preference name="DisallowOverscroll" value="true" />
     <content src="index.html" />
     <access origin="*" />
 </widget>

@@ -82,9 +82,9 @@ define([
 					
 				});
 				
-	            //go to index page and init components
-	            //$.mobile.changePage("pages/index.html", {transition: "none"});
-	            
+	            //go to search page and init components
+				$.mobile.changePage("pages/searchScreen.html", { transition: "slide" });
+
 	            // Tells Backbone to start watching for hashchange events
             	//Backbone.history.start();
             	
@@ -98,7 +98,6 @@ define([
          */
         initComponents: function(onInit) 
         {
-        	//TODO: currently called in IndexPageView.js thats not quite right
         	if(!this._model)
         	{
 				var self = this;

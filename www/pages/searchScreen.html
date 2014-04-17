@@ -1,0 +1,51 @@
+	<div id="searchScreen" data-role="page" data-theme="a">
+		
+		<!-- Note: had to set a header height so my content wouldn't be 
+		pushed down the page by a dynamically changing header size. Previous searches -->
+		<div data-role="header" data-position="fixed" data-theme="a" data-tap-toggle="false" data-id="fixedHeader" style="height: 108px;">
+			<!-- content auto inserted -->
+			<h1>
+				<img id="watsonImg" src="../img/watson_logo_trans.png" style="height:35px;vertical-align: bottom;" />
+				IBM Watson
+			</h1>
+			<!-- <a href="#searchScreen" data-transition="slide" data-direction="reverse" class="ui-btn-left" data-theme="a" data-mini="true">Back</a> -->
+			
+			<div class="separate-top">
+				<div class="ui-grid-a">
+						<div id="searchContainer" class="ui-block-a" style="width:85%; padding-top: 15px;padding-left: 5px;">
+							<ul id="search_searchScreen" data-theme="c" data-role="listview" data-inset="true" data-filter="true" data-filter-reveal="true" data-filter-placeholder="Ask a question">
+							  <li><a href="#">THINKing...</a></li>
+							</ul>
+						</div>
+						<div class="ui-block-b" style="width:15%; text-align: center;">
+							<a id="goAsk" href="#" data-inline="true" data-theme="a" data-role="button">Go</a>
+						</div>
+						<!-- Added x-webkit-speech attrib to input box instead
+						<div class="ui-block-c" style="width:15%; text-align: center;">
+							<a id="microphoneAsk" href="#" data-inline="true" data-theme="a" data-role="button" data-icon="microphone" data-iconpos="notext">Speak</a>
+						</div>
+						-->
+				</div>
+			</div>
+		</div>
+	
+		<div data-role="content" data-theme="a" style="background:none;padding-top: 100px;">
+			<div class="ui-grid-solo">
+				<div class="ui-block-a logoWrapper">
+					<img id="searchImg" src="../img/search_icon.png" />				 
+				</div>
+			</div>
+			<div class="ui-grid-solo"  align="center">
+				<div class="ui-block-a" style="width:85%">
+						<p class="search-info" >
+							Ask Watson a question by <br>
+							entering your question in the box <br>
+							<!--above or tap the microphone <br> 
+							to enter via voice.-->
+						</p>
+				</div>
+			</div>
+		
+		</div>
+
+	</div><!-- /searchScreen -->
