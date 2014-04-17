@@ -30,9 +30,11 @@ require.config( {
 require([
 	 
 		"jquery", 
-		"backbone"
+		"backbone",
+		"com/routers/MobileRouter",
+		"com/models/Constants"
 	
-	], function( $, Backbone ) {
+	], function( $, Backbone, MobileRouter, Constants ) {
 	
 	console.log("We've made it past dep loading! ");
 
@@ -48,24 +50,17 @@ require([
 			
 			console.log("ON mobile init!");
 			
-			// Instantiates a new Backbone.js Mobile Router
-			window.MobileRouter = new MobileRouter();
-			
-			//disable selection for any element on the page
-			document.onselectstart = function(){ return false; };
-			
-			//make sure scroll event fires sooner on ios
-			document.addEventListener("touchmove", function(){$(window).trigger("scroll");}, false);
-			document.addEventListener("scroll", function(){$(window).trigger("scroll");}, false);
-			
 			//set default page transition
-			//$.mobile.defaultPageTransition = Constants.DEFAULT_PAGE_TRANSITION;
+			$.mobile.defaultPageTransition = Constants.DEFAULT_PAGE_TRANSITION;
 	
 	});
 	
 	//need to be loaded after mobileinit has been set to be able to listen for the event
 	require( [ "jquerymobile" ], function() {
-
+		console.log("ON jquerymobile load! Now load MobileRouter");
+			
+		// Instantiates a new Backbone.js Mobile Router
+		window.MobileRouter = new MobileRouter();
 	});
 
 
