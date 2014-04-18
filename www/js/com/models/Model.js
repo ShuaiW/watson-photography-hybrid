@@ -3,8 +3,9 @@ define([
 		"jquery", 
 		"backbone",
 		"com/models/Constants",
+		"com/models/SearchModel"
 		 
-	], function( $, Backbone, Constants ) {
+	], function( $, Backbone, Constants, SearchModel ) {
 
 	var Model = Backbone.Model.extend({
 
@@ -13,6 +14,8 @@ define([
 			this.set({
 				"lat" : Constants.DEFAULT_USER_LAT,
 				"lng" : Constants.DEFAULT_USER_LNG,
+				"currentSearch" : new SearchModel(),
+				//"saved_searches" : new SearchModelCollection()
 			});
 
 			this._getUserLocation();
@@ -44,6 +47,15 @@ define([
 
 			navigator.geolocation.getCurrentPosition(onSuccess, onError, {timeout: 5000});
 			console.log("Getting user's location...");
+		},
+
+
+		/**
+		 * reset the search model
+		 * @param none
+		 */
+		resetSearchModel: function() {
+			this.currentSearch = new SearchModel();
 		},
 
 	});

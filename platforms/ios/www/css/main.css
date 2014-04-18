@@ -39,7 +39,6 @@ body {
     height:100%;
     margin:0px;
     padding:0px;
-    text-transform:uppercase;
     width:100%;
 }
 
@@ -77,19 +76,49 @@ body {
      color: #808080;
 }
 
+#splashScreenOLD {
+    background:url(../img/logo_med.png) no-repeat center top; /* 170px x 200px */
+    position:absolute;             /* position in the center of the screen */
+    left:50%;
+    top:50%;
+    height:50px;                   /* text area height */
+    width:225px;                   /* text area width */
+    text-align:center;
+    margin:-215px 0px 0px -112px;  /* offset vertical: half of image height and text area height */
+                                   /* offset horizontal: half of text area width */
+}
 
 #splashScreen {
-    width: 100%;
-    height: 100%;
-    /*background: url("../img/black_bg.jpg") repeat-x;*/
-    z-index: 1;
+    background:url(../img/logo_med.png) no-repeat center top; /* 170px x 200px */
+    position:absolute;
+    left:0;
+    top:0;
+    /*
+    height:50px;
+    width:225px;
+    */
+    text-align:center;
+    min-height: 100%;
+}
+
+#splashScreen div.app-title {
+    font-family: LubalinGraphStd,Helvetica,Arial,sans-serif;
+    color: #efd5a8;
+    font-size:32px;
+
+    position:absolute;
+    left:20px;
+    top:320px;
+    height:250px;
+    width:225px;
+    text-align:left;
+    text-transform:uppercase;
 }
 
 
 #searchScreen {
     width: 100%;
     /*background: url("../img/black_bg.jpg") repeat-x;*/
-    z-index: 1;
 }
 
 #searchResultContainer .searchResultQuestion{

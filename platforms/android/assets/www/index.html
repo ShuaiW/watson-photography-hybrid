@@ -4,7 +4,8 @@
         <meta charset="utf-8" />
         <meta name="format-detection" content="telephone=no" />
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
+        <!--, target-densitydpi=device-dpi-->
         <title>Watson Photography</title>
         
         <!-- jquery mobile -->
@@ -21,13 +22,7 @@
     <body id="content">
 
         <div id="splashScreen" data-role="page" data-theme="a" data-url="splashScreen" data-class="com/views/SplashScreenPageView">
-            <div data-role="content">
-                <div class="ui-grid-solo">
-                    <div class="ui-block-a logoWrapper">
-                        <img id="logo" src="img/watson_logo_trans.png"/>              
-                    </div>
-                </div>
-            </div>
+            <div class="app-title">The<br/>Photographer's<br/>Pocket<br/>Field Guide</div>
         </div><!-- /splash screen -->
 
         <script type="text/javascript" src="cordova.js"></script>

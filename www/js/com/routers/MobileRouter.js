@@ -16,6 +16,10 @@ define([
     var MobileRouter = Backbone.Router.extend({
 		
 		_pageViewClasses: null, //stores loaded pageview classes, object {"key" : PageView};
+		_header: null, //Header object
+		_footer: null, //Footer object
+		_alerts: null, //Alerts object
+		_popupManager: null, //PopupManager object
 		_model: null, //Model object
 		
 		currentPage: null, //current page view class
@@ -69,46 +73,28 @@ define([
 							}
 						}
 						
-						//parse page content as template, and apply localization
-						if(self._model)
-						{	
-			    			//parse page html as handlebars template to allow for localization
-			    			var template = Handlebars.compile($(page).html());
-			    			var params = {foo: "bar"};
-							var html = template(params);
-							$(page).html(html);
-						}
 					}
 					
 				});
+
+				//initialize singleton objects
+				self._model = new Model({});
+				/*
+				self._header = new Header({parent: $("body")});
+				self._footer = new Footer({parent: $("body")});
+				self._alerts = new Alerts({parent: $("body")});
+				self._popupManager = new PopupManager({parent: $("body")});
+				*/
 				
-	            //go to search page and init components
-				$.mobile.changePage("pages/searchScreen.html", { transition: "slide" });
+	            //go to search page
+				var splashPause = setTimeout(function(){
+					$.mobile.changePage("pages/searchScreen.html", { transition: "fade" });
+				}, Constants.DEFAULT_SPLASH_TIME);
 
 	            // Tells Backbone to start watching for hashchange events
             	//Backbone.history.start();
             	
             });
-        },
-        
-        /**
-         * initialize singleton objects 
-         * should be called after splash page so urls for templates can stay consistent
-         * @param onInit, function
-         */
-        initComponents: function(onInit) 
-        {
-        	if(!this._model)
-        	{
-				var self = this;
-				self._model = new Model({}); //init model
-        	}
-        	else {
-        		if(onInit) {
-					onInit();
-				}
-        		console.log("Cannot initialize singleton components, components already initialized.");
-        	}
         },
         
         /**
@@ -118,6 +104,33 @@ define([
          */
         getModel: function() {
         	return this._model;
+        },
+
+        /**
+         * return the reference to the header
+         * @param none 
+         * @return header, Header object
+         */
+        getHeader: function() {
+        	return this._header;
+        },
+
+        /**
+         * return the reference to the alerts
+         * @param none
+         * @return alerts, Alerts object
+         */
+        getAlerts: function() {
+        	return this._alerts;
+        },
+        
+        /**
+         * return the reference to the popup manager
+         * @param none
+         * @return manager, PopupManager object 
+         */
+        getPopupManager: function() {
+        	return this._popupManager;
         },
         
         /**

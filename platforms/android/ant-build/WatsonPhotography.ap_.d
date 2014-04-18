@@ -41,6 +41,7 @@
 /Users/capaez/gitRepos/WatsonPhotography/watson-photography-hybrid/platforms/android/assets/www/fonts/ITC_Lubalin_Graph/OpenType_Std/LubalinGraphStd-MediumObl.otf \
 /Users/capaez/gitRepos/WatsonPhotography/watson-photography-hybrid/platforms/android/assets/www/img/black_bg.jpg \
 /Users/capaez/gitRepos/WatsonPhotography/watson-photography-hybrid/platforms/android/assets/www/img/logo.png \
+/Users/capaez/gitRepos/WatsonPhotography/watson-photography-hybrid/platforms/android/assets/www/img/logo_med.png \
 /Users/capaez/gitRepos/WatsonPhotography/watson-photography-hybrid/platforms/android/assets/www/img/search_icon.png \
 /Users/capaez/gitRepos/WatsonPhotography/watson-photography-hybrid/platforms/android/assets/www/img/watson_logo_trans.png \
 /Users/capaez/gitRepos/WatsonPhotography/watson-photography-hybrid/platforms/android/assets/www/img/watson_thinking_sm.gif \
@@ -53,6 +54,7 @@
 /Users/capaez/gitRepos/WatsonPhotography/watson-photography-hybrid/platforms/android/assets/www/js/com/views \
 /Users/capaez/gitRepos/WatsonPhotography/watson-photography-hybrid/platforms/android/assets/www/js/com/models/Constants.js \
 /Users/capaez/gitRepos/WatsonPhotography/watson-photography-hybrid/platforms/android/assets/www/js/com/models/Model.js \
+/Users/capaez/gitRepos/WatsonPhotography/watson-photography-hybrid/platforms/android/assets/www/js/com/models/SearchModel.js \
 /Users/capaez/gitRepos/WatsonPhotography/watson-photography-hybrid/platforms/android/assets/www/js/com/routers/MobileRouter.js \
 /Users/capaez/gitRepos/WatsonPhotography/watson-photography-hybrid/platforms/android/assets/www/js/com/utils/DataUtils.js \
 /Users/capaez/gitRepos/WatsonPhotography/watson-photography-hybrid/platforms/android/assets/www/js/com/utils/TemplateUtils.js \
