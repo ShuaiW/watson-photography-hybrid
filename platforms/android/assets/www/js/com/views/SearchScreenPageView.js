@@ -3,8 +3,9 @@ define([
         "jquery", 
         "backbone",
         "com/views/PageView",
+        "com/utils/WatsonServiceUtil"
     
-    ], function( $, Backbone, PageView ) {
+    ], function( $, Backbone, PageView, WatsonServiceUtil ) {
         
     // Extends PageView class
     var SearchScreenPageView = PageView.extend({
@@ -36,19 +37,38 @@ define([
             var self = this;
             var model = MobileRouter.getModel();
             
-            var searchContainer = $("#searchContainer",self);
-            var searchInput = $(searchContainer).find("input.ui-input-text");
+            var searchInput = $("#searchContainer").find(".ui-input-search input");
 
             //Search button handler
             self.$el.on("tap", "#goAsk", function(){
                 console.log("#goAsk button pressed. model=",model);
+                console.log("searchInput=",searchInput.val());
 
                 model.resetSearchModel();
-                model.currentSearch.SearchString = searchInput;
+                model.currentSearch.SearchString = searchInput.val();
                 //model.currentSearch.SearchType = "audio";
 
                 //$.mobile.changePage("home.html", {transition: "none"});
                 //$.mobile.changePage("#watsonThinkingScreen", {transition: "slideup"});
+
+                $.mobile.loading("show", {
+                    text: "Watson is thinking...",
+                    textVisible: false,
+                    //html: '<div class="logoWrapper watsonThinkingImg"></div>'
+                    html:"<span class='ui-bar ui-shadow ui-overlay-a ui-corner-all' style='min-width:250px'><img src='../img/watson_thinking_sm.gif'><h2>Watson is thinking...</h2></span>"
+                });
+                var onWatsonsAnswer =  function( answerCollection ){
+
+                    $.mobile.loading("hide");
+
+                    console.log(answerCollection);
+                    //store answerCollection in memeory
+                    //var model = MobileRouter.getModel();
+                    //model.set("currentSearch", answerCollection);
+
+                };
+
+                WatsonServiceUtil.askWatsonSync(searchInput.val(), onWatsonsAnswer);
 
                 return false;
             });

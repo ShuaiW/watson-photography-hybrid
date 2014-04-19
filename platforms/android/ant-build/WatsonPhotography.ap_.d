@@ -56,9 +56,9 @@
 /Users/capaez/gitRepos/WatsonPhotography/watson-photography-hybrid/platforms/android/assets/www/js/com/models/Model.js \
 /Users/capaez/gitRepos/WatsonPhotography/watson-photography-hybrid/platforms/android/assets/www/js/com/models/SearchModel.js \
 /Users/capaez/gitRepos/WatsonPhotography/watson-photography-hybrid/platforms/android/assets/www/js/com/routers/MobileRouter.js \
-/Users/capaez/gitRepos/WatsonPhotography/watson-photography-hybrid/platforms/android/assets/www/js/com/utils/DataUtils.js \
 /Users/capaez/gitRepos/WatsonPhotography/watson-photography-hybrid/platforms/android/assets/www/js/com/utils/TemplateUtils.js \
 /Users/capaez/gitRepos/WatsonPhotography/watson-photography-hybrid/platforms/android/assets/www/js/com/utils/Utils.js \
+/Users/capaez/gitRepos/WatsonPhotography/watson-photography-hybrid/platforms/android/assets/www/js/com/utils/WatsonServiceUtil.js \
 /Users/capaez/gitRepos/WatsonPhotography/watson-photography-hybrid/platforms/android/assets/www/js/com/views/HomePageView.js \
 /Users/capaez/gitRepos/WatsonPhotography/watson-photography-hybrid/platforms/android/assets/www/js/com/views/PageView.js \
 /Users/capaez/gitRepos/WatsonPhotography/watson-photography-hybrid/platforms/android/assets/www/js/com/views/SearchScreenPageView.js \

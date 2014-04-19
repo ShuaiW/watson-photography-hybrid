@@ -88,7 +88,7 @@ define([
 				
 	            //go to search page
 				var splashPause = setTimeout(function(){
-					$.mobile.changePage("pages/searchScreen.html", { transition: "pop" });
+					$.mobile.changePage("pages/searchScreen.html", { transition: "fade" });
 				}, Constants.DEFAULT_SPLASH_TIME);
 
 	            // Tells Backbone to start watching for hashchange events
