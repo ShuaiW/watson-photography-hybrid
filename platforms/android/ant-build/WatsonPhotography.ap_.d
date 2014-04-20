@@ -4,6 +4,7 @@
 /Users/capaez/gitRepos/WatsonPhotography/watson-photography-hybrid/platforms/android/res/drawable-ldpi/icon.png \
 /Users/capaez/gitRepos/WatsonPhotography/watson-photography-hybrid/platforms/android/res/drawable-mdpi/icon.png \
 /Users/capaez/gitRepos/WatsonPhotography/watson-photography-hybrid/platforms/android/res/drawable-xhdpi/icon.png \
+/Users/capaez/gitRepos/WatsonPhotography/watson-photography-hybrid/platforms/android/res/drawable-xxhdpi/icon.png \
 /Users/capaez/gitRepos/WatsonPhotography/watson-photography-hybrid/platforms/android/res/values/strings.xml \
 /Users/capaez/gitRepos/WatsonPhotography/watson-photography-hybrid/platforms/android/res/xml/config.xml \
 /Users/capaez/gitRepos/WatsonPhotography/watson-photography-hybrid/platforms/android/ant-build/res/drawable/icon.png \
@@ -11,6 +12,7 @@
 /Users/capaez/gitRepos/WatsonPhotography/watson-photography-hybrid/platforms/android/ant-build/res/drawable-ldpi/icon.png \
 /Users/capaez/gitRepos/WatsonPhotography/watson-photography-hybrid/platforms/android/ant-build/res/drawable-mdpi/icon.png \
 /Users/capaez/gitRepos/WatsonPhotography/watson-photography-hybrid/platforms/android/ant-build/res/drawable-xhdpi/icon.png \
+/Users/capaez/gitRepos/WatsonPhotography/watson-photography-hybrid/platforms/android/ant-build/res/drawable-xxhdpi/icon.png \
 /Users/capaez/gitRepos/WatsonPhotography/watson-photography-hybrid/platforms/android/assets/_where-is-www.txt \
 /Users/capaez/gitRepos/WatsonPhotography/watson-photography-hybrid/platforms/android/assets/www \
 /Users/capaez/gitRepos/WatsonPhotography/watson-photography-hybrid/platforms/android/assets/www/cordova.js \
