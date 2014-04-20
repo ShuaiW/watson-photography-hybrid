@@ -25,6 +25,8 @@ define([
 			/**** default user settings ****/
 			DEFAULT_USER_LAT : 41.8782,
 			DEFAULT_USER_LNG : -87.6297,
+			DEFAULT_USER_AUTH : "Basic dXNlcjE6VlE0d1daV3Y=",
+			WATSON_INSTANCE_NUMBER : 23,
 
 			/**** resolution constants ****/
 			RESOLUTION_PHONE : 480,

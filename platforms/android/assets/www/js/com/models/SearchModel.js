@@ -11,9 +11,8 @@ define([
 		initialize: function(attributes, options)
 		{
 			this.set({
-				"SearchString" : "",
-				"SearchType" : "",
-				"CurrentSearchResults" : {}
+				"searchString" : attributes["searchString"] ? attributes["searchString"] : "",
+				"currentSearchResults" : attributes["currentSearchResults"] ? attributes["currentSearchResults"] : {}
 			});
 
 		},

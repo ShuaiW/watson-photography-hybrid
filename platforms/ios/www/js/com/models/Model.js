@@ -14,7 +14,7 @@ define([
 			this.set({
 				"lat" : Constants.DEFAULT_USER_LAT,
 				"lng" : Constants.DEFAULT_USER_LNG,
-				"currentSearch" : new SearchModel(),
+				"currentSearch" : new SearchModel({}),
 				//"saved_searches" : new SearchModelCollection()
 			});
 
@@ -51,11 +51,11 @@ define([
 
 
 		/**
-		 * reset the search model
-		 * @param none
+		 * set the current search model
+		 * @param newSearch, SearchModel
 		 */
-		resetSearchModel: function() {
-			this.currentSearch = new SearchModel();
+		setCurrentSearchModel: function(newSearch) {
+			this.set("currentSearch", newSearch);
 		},
 
 	});

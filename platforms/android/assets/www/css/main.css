@@ -95,23 +95,6 @@ body {
     vertical-align: bottom;
 }
 
-.search-info {
-     font-family: LubalinGraphStd,Helvetica,Arial,sans-serif;
-     color: #808080;
-}
-
-#splashScreenOLD {
-    background:url(../img/logo_med.png) no-repeat center top; /* 170px x 200px */
-    position:absolute;             /* position in the center of the screen */
-    left:50%;
-    top:50%;
-    height:50px;                   /* text area height */
-    width:225px;                   /* text area width */
-    text-align:center;
-    margin:-215px 0px 0px -112px;  /* offset vertical: half of image height and text area height */
-                                   /* offset horizontal: half of text area width */
-}
-
 #splashScreen {
     background:url(../img/logo_med.png) no-repeat center top; /* 170px x 200px */
     position:absolute;
@@ -148,7 +131,17 @@ body {
 
 #searchScreen .ui-content {
     background:none;
+    padding: 0px;
+}
+
+#searchScreen .search-logo-container {
     padding-top: 100px;
+}
+
+#searchScreen .search-info-container {
+    width:85%;
+    font-family: LubalinGraphStd,Helvetica,Arial,sans-serif;
+    color: #808080;
 }
 
 #searchContainer {
@@ -160,10 +153,15 @@ body {
 #searchResultContainer .searchResultQuestion{
     font-size: 24px;
     font-weight: bold;
+    color: #ffffff;
     padding-bottom: 25px;
     text-shadow: 1px 1px 1px #111;
     /*light blue*/
     background: #37b9f2;
+}
+
+#searchResultContainer .searchResultAnswer{
+    padding-left: 5px;
 }
 
 #searchResultContainer .searchResultHead {
