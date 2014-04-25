@@ -29,54 +29,54 @@ The hybrid mobile application sample code was created using Cordova v3.4. Below 
 1. Make sure an up-to-date version of [node.js] is installed on your system.
 
 2. Install the latest version of Cordova globally:
-```sh
-sudo npm install -g cordova
-```
+    ```sh
+    sudo npm install -g cordova
+    ```
 
 3. Open Terminal and navigate to a directory where you store projects on your system. For example:
-```sh
-cd ~/Projects
-```
+    ```sh
+    cd ~/Projects
+    ```
 
 4. Create a new directory for this project and change into that directory:
-```sh
-mkdir watson-photography && cd $_
-```
+    ```sh
+    mkdir watson-photography && cd $_
+    ```
 
 5. Create a new Cordova project with name “Watson Photography" and bundle id "com.ibm.watson.WatsonPhotographyHybrid":
-```sh
-cordova create watson-photography-hybrid com.ibm.watson.WatsonPhotographyHybrid 'Watson Photography'
-```
+    ```sh
+    cordova create watson-photography-hybrid com.ibm.watson.WatsonPhotographyHybrid 'Watson Photography'
+    ```
 
 6. Navigate into your new project directory:
-```sh 
-cd watson-photography-hybrid
-```
+    ```sh 
+    cd watson-photography-hybrid
+    ```
 
 7. At this point you can replace the `www` directory in your new project with the `www` directory from this repository 
 
 8. Now add a couple of platforms that you would like to support:
-```sh
-cordova platform add android
-cordova platform add ios
-```
+    ```sh
+    cordova platform add android
+    cordova platform add ios
+    ```
 
 9. Make a build:
-```sh
-cordova build
-```
+    ```sh
+    cordova build
+    ```
 
 10. Add some common Cordova plugins:
-```sh
-cordova plugin add org.apache.cordova.console
-cordova plugin add org.apache.cordova.device
-cordova plugin add org.apache.cordova.splashscreen
-```
+    ```sh
+    cordova plugin add org.apache.cordova.console
+    cordova plugin add org.apache.cordova.device
+    cordova plugin add org.apache.cordova.splashscreen
+    ```
 
 11. Start a local web server for the www/ assets: (default port 8000)
-```sh
-cordova serve 8000
-```
+    ```sh
+    cordova serve 8000
+    ```
 
 -----
 
