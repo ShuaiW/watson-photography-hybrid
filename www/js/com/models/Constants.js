@@ -17,7 +17,6 @@ define([
 
 			/**** page view classes need to be added here so they can be loaded before being initialized ****/
 			VIEW_CLASSES : [
-				"com/views/SplashPageView",
 				//"com/views/LoginPageView",
 				"com/views/SearchScreenPageView",
 			],
@@ -25,7 +24,8 @@ define([
 			/**** default user settings ****/
 			DEFAULT_USER_LAT : 41.8782,
 			DEFAULT_USER_LNG : -87.6297,
-			DEFAULT_USER_AUTH : "Basic dXNlcjE6VlE0d1daV3Y=",
+			DEFAULT_USER_NAME : "user1",
+			DEFAULT_USER_PASS : "",
 			WATSON_INSTANCE_NUMBER : 23,
 
 			/**** resolution constants ****/

@@ -8,6 +8,12 @@ define([
 
 	var Utils = Backbone.Model.extend({},
 	{
+
+        createBase64Auth: function(user, password) {
+            var tok = user + ':' + password;
+            var hash = btoa(tok);
+            return "Basic " + hash;
+        },
         
         /**
          * force a number to be double digits if it's not

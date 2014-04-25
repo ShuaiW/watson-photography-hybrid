@@ -2,15 +2,17 @@ define([
 		
 		"jquery", 
 		"backbone",
-		"com/models/Constants"
+		"com/models/Constants",
+		"com/utils/Utils"
 		
-	], function($, Backbone, Constants ) {
+	], function($, Backbone, Constants, Utils ) {
 
 	var WatsonServiceUtil = Backbone.Model.extend({},
 	
 	{
 		
 		SERVER_BASE_URL : "https://watson.ihost.com/instance/"+Constants.WATSON_INSTANCE_NUMBER+"/deepqa/v1/question",
+		USER_AUTH : Utils.createBase64Auth(Constants.DEFAULT_USER_NAME, Constants.DEFAULT_USER_PASS),
 		
 		/**
 		 * Ask a Watson a question using the synchronous service
@@ -19,7 +21,6 @@ define([
 		 */
 		askWatsonSync: function(questionText, onResultHandler)
 		{
-
 			var formatQuestion = "{question: {questionText: "+questionText+"}}";
 			$.ajax({
 				type: "POST",
@@ -28,7 +29,7 @@ define([
 				headers: {
 					"X-SyncTimeout": "30", 
 					"Accept": "application/json", 
-					"Authorization": Constants.DEFAULT_USER_AUTH,
+					"Authorization": WatsonServiceUtil.USER_AUTH,
 					"Content-Type": 'application/json',
 					"Cache-Control": "no-cache"
 				},

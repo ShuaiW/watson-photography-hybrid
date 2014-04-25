@@ -81,6 +81,7 @@ define([
             /**Build result rows from current results in model**/
             if(currentSearchResults){
                 var c = currentSearchResults.question;
+                //dump the object returned from Watson to the console
                 console.log("c=",c);
 
                 //clear current body content
@@ -99,17 +100,16 @@ define([
                 $(searchResultContainer).append("<ul data-role='listview' data-theme='b'><li class='searchResultQuestion'>"+c.questionText+"</li></ul>");
                 
 
-                if(c.answers){
-                    //loop over answers
-                    $.each(c.answers,function(i,aResult){
+                if(c.evidencelist){
+
+                    //for this example, only display the first 5 pieces of evidence
+                    var evidence = c.evidencelist.slice(0,5);
+                    //loop over evidence
+                    $.each(evidence,function(i,aResult){
                         console.log("aResult "+i+"=",aResult);
-                        var percentConfidence = Math.round(aResult.confidence * 100);
-                        var numOfReferences = 0;
-                        var evidenceText = '2014-04-20 - Source information, Inc.';
-                        if(typeof aResult.evidence != 'undefined'){
-                            numOfReferences = aResult.evidence.length;
-                            evidenceText = aResult.evidence[0].text;
-                        }
+                        var percentConfidence = Math.round(aResult.value * 100);
+                        var numOfReferences = c.evidencelist.length;
+                        var evidenceText = aResult.text;
                         
                         var rowResult  = '<div class="searchResultAnswer" data-role="collapsible" data-theme="a" data-content-theme="d" data-inset="false">'
                             + '<h3><span class="searchResultHead">' + aResult.text +'</span>'

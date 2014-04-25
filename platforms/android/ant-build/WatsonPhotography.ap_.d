@@ -64,7 +64,6 @@
 /Users/capaez/gitRepos/WatsonPhotography/watson-photography-hybrid/platforms/android/assets/www/js/com/views/HomePageView.js \
 /Users/capaez/gitRepos/WatsonPhotography/watson-photography-hybrid/platforms/android/assets/www/js/com/views/PageView.js \
 /Users/capaez/gitRepos/WatsonPhotography/watson-photography-hybrid/platforms/android/assets/www/js/com/views/SearchScreenPageView.js \
-/Users/capaez/gitRepos/WatsonPhotography/watson-photography-hybrid/platforms/android/assets/www/js/com/views/SplashPageView.js \
 /Users/capaez/gitRepos/WatsonPhotography/watson-photography-hybrid/platforms/android/assets/www/js/libs/backbone \
 /Users/capaez/gitRepos/WatsonPhotography/watson-photography-hybrid/platforms/android/assets/www/js/libs/jquery \
 /Users/capaez/gitRepos/WatsonPhotography/watson-photography-hybrid/platforms/android/assets/www/js/libs/jquery-mobile-bower \
@@ -585,7 +584,6 @@
 /Users/capaez/gitRepos/WatsonPhotography/watson-photography-hybrid/platforms/android/assets/www/js/libs/underscore/underscore.js \
 /Users/capaez/gitRepos/WatsonPhotography/watson-photography-hybrid/platforms/android/assets/www/pages/login.html \
 /Users/capaez/gitRepos/WatsonPhotography/watson-photography-hybrid/platforms/android/assets/www/pages/searchScreen.html \
-/Users/capaez/gitRepos/WatsonPhotography/watson-photography-hybrid/platforms/android/assets/www/pages/splash.html \
 /Users/capaez/gitRepos/WatsonPhotography/watson-photography-hybrid/platforms/android/assets/www/plugins/org.apache.cordova.device \
 /Users/capaez/gitRepos/WatsonPhotography/watson-photography-hybrid/platforms/android/assets/www/plugins/org.apache.cordova.splashscreen \
 /Users/capaez/gitRepos/WatsonPhotography/watson-photography-hybrid/platforms/android/assets/www/plugins/org.apache.cordova.device/www \
