@@ -2,14 +2,14 @@ define([
         
         "jquery", 
         "backbone",
-        "com/views/PageView",
         "com/utils/WatsonServiceUtil",
+        "com/models/Constants",
         "com/models/SearchModel"
     
-    ], function( $, Backbone, PageView, WatsonServiceUtil, SearchModel ) {
+    ], function( $, Backbone, WatsonServiceUtil, Constants, SearchModel ) {
         
-    // Extends PageView class
-    var SearchScreenPageView = PageView.extend({
+    // Extends Backbone's view controller class
+    var SearchScreenPageView = Backbone.View.extend({
         
         /**
          * The View Constructor
@@ -18,8 +18,6 @@ define([
         initialize: function(options) 
         {
             options.hideHeader = false;
-            //options.headerState = Header.STATE_SIMPLE;
-            PageView.prototype.initialize.call(this, options);
             var self = this;
             
             this.$el.on("pagebeforeshow", function(){                
@@ -34,10 +32,8 @@ define([
                 var searchInput = $("#searchContainer").find(".ui-input-search input");
                 console.log("searchInput=",searchInput.val());
 
-                //$.mobile.changePage("home.html", {transition: "none"});
-                //$.mobile.changePage("#watsonThinkingScreen", {transition: "slideup"});
-
                 //This could be done so much nicer if we could use async calls to Watson
+                //$.mobile.changePage("#watsonThinkingScreen", {transition: "slideup"});
                 $.mobile.loading("show", {
                     text: "Watson is thinking...",
                     textVisible: false,
@@ -47,18 +43,11 @@ define([
 
                     $.mobile.loading("hide");
 
-                    console.log("currentSearchResults=",currentSearchResults);
-
                     var currentSearch = new SearchModel({searchString: searchInput.val(), currentSearchResults: currentSearchResults});
                     
                     //store currentSearchResults in memeory
                     //var model = MobileRouter.getModel();
                     //model.set("currentSearch", currentSearch);
-
-                    //var model = MobileRouter.getModel();
-                    //model.setCurrentSearchModel(currentSearch);
-
-                    //console.log("model currentSearch=", model.currentSearch);
 
                     self.render(currentSearchResults);
                 };
@@ -82,7 +71,7 @@ define([
             if(currentSearchResults){
                 var c = currentSearchResults.question;
                 //dump the object returned from Watson to the console
-                console.log("c=",c);
+                console.log("currentSearchResults=",c);
 
                 //clear current body content
                 var activePageContent = $(".ui-content", $.mobile.activePage);
@@ -99,11 +88,10 @@ define([
                 //Add question row
                 $(searchResultContainer).append("<ul data-role='listview' data-theme='b'><li class='searchResultQuestion'>"+c.questionText+"</li></ul>");
                 
-
                 if(c.evidencelist){
 
-                    //for this example, only display the first 5 pieces of evidence
-                    var evidence = c.evidencelist.slice(0,5);
+                    //for this example, only a subset of the evidence, default is 5
+                    var evidence = c.evidencelist.slice(0,Constants.DEFAULT_RESULTS_TO_DISPLAY);
                     //loop over evidence
                     $.each(evidence,function(i,aResult){
                         console.log("aResult "+i+"=",aResult);
@@ -112,7 +100,7 @@ define([
                         var evidenceText = aResult.text;
                         
                         var rowResult  = '<div class="searchResultAnswer" data-role="collapsible" data-theme="a" data-content-theme="d" data-inset="false">'
-                            + '<h3><span class="searchResultHead">' + aResult.text +'</span>'
+                            + '<h3><span class="searchResultHead">' + evidenceText.substring(0,100) +'</span>'
                             + '<div class="progress-bar black-inset-shadow green"><span style="width: '+percentConfidence+'%"></span></div>'
                             + '<p>Search confidence: ' + percentConfidence + '%</p>' 
                             + '<p class="searchResultLighter">Number of references: ' + numOfReferences + '</p></h3>'
@@ -136,11 +124,11 @@ define([
         },
         
          /**
-         * do any cleanup, remove window binding here
+         * do any cleanup, remove binding to the document or window here
          * @param none
          */
         dispose: function() {
-            PageView.prototype.dispose.call(this);
+
         },
 
     });

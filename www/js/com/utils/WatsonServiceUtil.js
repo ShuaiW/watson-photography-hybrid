@@ -25,14 +25,19 @@ define([
 			$.ajax({
 				type: "POST",
 				async: false,
-				url: WatsonServiceUtil.SERVER_BASE_URL,
+				url: WatsonServiceUtil.SERVER_BASE_URL, //URL for the Watson QA API service
+				/*
+				"X-SyncTimeout": value represents how long the server waits after the question is submitted until it times out
+				"Authorization": Base64 encoded authentication header from the user and password stored in the constants file
+				*/
 				headers: {
 					"X-SyncTimeout": "30", 
-					"Accept": "application/json", 
+					"Accept": "application/json",
 					"Authorization": WatsonServiceUtil.USER_AUTH,
 					"Content-Type": 'application/json',
 					"Cache-Control": "no-cache"
 				},
+				//Format the outgoing question in the format the Watson QA API expects
 				data: '{"question": {"questionText": "'+questionText+'"}}',
 				dataType: "json",
 				cache: false,

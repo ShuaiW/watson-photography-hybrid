@@ -14,6 +14,7 @@ define([
 			DEFAULT_PAGE_TRANSITION : "slide",
 			DEFAULT_WINDOW_RESIZE_DELAY : 250, //default time to wait until handling the window resize event
 			DEFAULT_SPLASH_TIME : 1000, //in ms
+			DEFAULT_RESULTS_TO_DISPLAY : 5,
 
 			/**** page view classes need to be added here so they can be loaded before being initialized ****/
 			VIEW_CLASSES : [
@@ -24,9 +25,9 @@ define([
 			/**** default user settings ****/
 			DEFAULT_USER_LAT : 41.8782,
 			DEFAULT_USER_LNG : -87.6297,
-			DEFAULT_USER_NAME : "user1",
-			DEFAULT_USER_PASS : "",
-			WATSON_INSTANCE_NUMBER : 23,
+			DEFAULT_USER_NAME : "user1",//change this to your Watson Instance username
+			DEFAULT_USER_PASS : "bE3bT6gW",//change this to your Watson Instance password
+			WATSON_INSTANCE_NUMBER : 23,//change this to your Watson Instance id
 
 			/**** resolution constants ****/
 			RESOLUTION_PHONE : 480,

@@ -8,7 +8,12 @@ define([
 
 	var Utils = Backbone.Model.extend({},
 	{
-
+        /**
+         * create a Base64 encoded string to be used as an
+         * authentication header
+         * @param user, password
+         * @return String
+         */
         createBase64Auth: function(user, password) {
             var tok = user + ':' + password;
             var hash = btoa(tok);
@@ -38,47 +43,7 @@ define([
 			var isPhone = $(window).width() <= Constants.RESOLUTION_PHONE;
 			return isPhone;
 		},
-		/**
-         * show confirm dialog
-         * @param question
-         * @param onYes, function
-         * @param onNo, function
-         * @param title
-         * @param labels, comma delimited string
-         */
-        showConfirmationAlert: function(question, onYes, onNo, title, labels)
-        {
-        	if(!title) {
-        		//title = WL.Client.getAppProperty(WL.AppProperty.APP_DISPLAY_NAME);
-        		title = Constants.APP_NAME_SHORT;
-        	}
-        	
-        	if(!labels) {
-        		labels = "Cancel,OK";
-        	}
-        	
-        	var onConfirm = function(index) {
-    			if(index == 2) {
-    				if(onYes) {
-    					onYes();
-    				}
-    			} else {
-    				if(onNo) {
-    					onNo();
-    				}
-    			}
-    		};
-    		
-    		if(navigator.notification) {
-    			navigator.notification.confirm(question, onConfirm, title, labels);
-    		}
-    		else {
-    			var answer = confirm(question);
-    			if(answer) {
-    				onConfirm(2);
-    			}
-    		}
-        },
+
 	});
 
 	return Utils;

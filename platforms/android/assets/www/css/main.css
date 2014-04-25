@@ -148,6 +148,8 @@ body {
     width:85%;
     padding-top: 5px;
     padding-left: 5px;
+    /*force the GPU to render the searchContainer for better performance*/
+    -webkit-transform: translatez(360);
 }
 
 #searchResultContainer .searchResultQuestion{
